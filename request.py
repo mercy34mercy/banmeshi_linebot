@@ -15,7 +15,7 @@ def get_recipe(postdata):
     print(datas)
 
 
-    data = requests.post(url,datas)
+    data = requests.post(url,json = datas)
 
     print(data)
 
