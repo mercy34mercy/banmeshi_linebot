@@ -5,17 +5,17 @@ def get_recipe(postdata):
     url = "https://banmeshii.herokuapp.com/get_db_recipe_one"
 
     datas = ({
-        "data":[]
+        "data":["豚肉"]
     })
 
     
 
-    datas["data"].append(str(postdata))
+    # datas["data"].append(str(postdata))
 
     print(datas)
 
 
-    data = requests.post(url,data = json.dumps(datas))
+    data = requests.post(url,datas)
 
     print(data)
 
