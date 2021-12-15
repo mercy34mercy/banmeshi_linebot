@@ -43,13 +43,10 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-
-
-
     recipe = get_recipe(event.message.text)
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=recipe))
+        TextSendMessage(text="我々は宇宙人だ"))
 
 if __name__ == "__main__":
     app.run()
