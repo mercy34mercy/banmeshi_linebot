@@ -12,12 +12,9 @@ def get_recipe(postdata):
 
     # datas["data"].append(str(postdata))
 
-    print(datas)
-
 
     data = requests.post(url,json = datas).text
 
-    print(data)
 
     returndata = data[0]
 
