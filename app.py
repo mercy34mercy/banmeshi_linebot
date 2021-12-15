@@ -10,6 +10,8 @@ from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,
 )
 
+from request import get_recipe
+
 app = Flask(__name__)
 
 line_bot_api  = LineBotApi('6Rh79OVL8PEWzFPUfFS4Elfc1Tz0J+Jiz5pOE2OGsagUXbzdQU+2e/1vDh+DMPZLdj38cYQZmAQwrJQzOd7oJ9Bgq8f00LQwpkXqgbXFmBAC4OvV4U5qemRYO8ikePJBA5mEw/rSTJUKf0mWQpOEFgdB04t89/1O/w1cDnyilFU=')
@@ -41,10 +43,17 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
+
+    datas = {
+        "data":[]
+    }
+
+    datas["data"].append(event.message.text)
+
+    recipe = get_recipe(datas["data"])
     line_bot_api.reply_message(
         event.reply_token,
-        
-        TextSendMessage(text=event.message.text))
+        TextSendMessage(text=recipe))
 
 if __name__ == "__main__":
     app.run()
