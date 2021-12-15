@@ -52,7 +52,7 @@ def handle_message(event):
 
     datas["data"].append(str(event.message.text))
 
-    recipe = get_recipe(datas["data"])
+    recipe = get_recipe(datas)
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=recipe))
