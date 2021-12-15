@@ -44,9 +44,9 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
 
-    datas = {
+    datas = ({
         "data":[]
-    }
+    })
 
     datas["data"].append(event.message.text)
 
