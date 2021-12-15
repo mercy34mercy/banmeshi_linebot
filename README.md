@@ -1,0 +1,1 @@
+# banmeshi_linebot
