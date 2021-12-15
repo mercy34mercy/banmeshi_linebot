@@ -19,6 +19,6 @@ def get_recipe(postdata):
 
     print(data)
 
-    returndata = data["data"][0]
+    returndata = data[0]
 
     return returndata
