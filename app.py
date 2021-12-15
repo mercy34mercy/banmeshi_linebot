@@ -44,17 +44,9 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
 
-    datas = ({
-        "data":[]
-    })
 
-    
 
-    datas["data"].append(str(event.message.text))
-
-    print(datas)
-
-    recipe = get_recipe(datas)
+    recipe = get_recipe(event.message.text)
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=recipe))
