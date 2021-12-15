@@ -46,7 +46,7 @@ def handle_message(event):
     recipe = get_recipe(event.message.text)
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(event.message.text))
+        TextSendMessage(text = recipe))
 
 if __name__ == "__main__":
     app.run()
