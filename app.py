@@ -48,7 +48,9 @@ def handle_message(event):
         "data":[]
     })
 
-    datas["data"].append(event.message.text)
+    print(event.message.text)
+
+    datas["data"].append(str(event.message.text))
 
     recipe = get_recipe(datas["data"])
     line_bot_api.reply_message(
