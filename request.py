@@ -13,10 +13,11 @@ def get_recipe(postdata):
     # datas["data"].append(str(postdata))
 
 
-    data = requests.post(url,json = datas).text
+    data = requests.post(url,json = datas).json
 
 
-    returndata = data[0]
+
+    returndata = data["data"][0]["recipeMaterial"]
 
     print(returndata)
 
