@@ -20,7 +20,8 @@ def get_recipe(postdata):
 
     data_ = json.loads(data)
 
-    returndata = data_["data"][0]["foodImageUrl"]
+    for i in range(0,3):
+        returndata = data_["data"][i]["foodImageUrl"]
 
     print(returndata)
 
