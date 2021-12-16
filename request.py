@@ -17,10 +17,10 @@ def get_recipe(postdata):
     #BanmeshiAPIにリクエスト
     data = requests.post(url,json = datas).text
 
-
+#json文字列を辞書に変換
     data_ = json.loads(data)
 
-    for i in range(0,3):
+    for i in range(1,3):
         returndata = data_["data"][i]["foodImageUrl"]
 
     print(returndata)
