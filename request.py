@@ -21,7 +21,7 @@ def get_recipe(postdata):
 #json文字列を辞書に変換
     data_ = json.loads(data)
     
-    returndata = data_["data"][0]["foodImageUrl"]["foodImage"]
+    returndata = data_["data"][0]["foodImageUrl"]
     
 
     print(returndata)
