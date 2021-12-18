@@ -19,7 +19,8 @@ handler = WebhookHandler('45262b6352a751b2bcfdb258cad68bd2')
 
 @app.route('/')
 def test():
-    get_recipe('鶏肉')
+    print(get_recipe('鶏肉'))
+    
 
 
     

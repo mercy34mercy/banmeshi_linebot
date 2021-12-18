@@ -1,6 +1,7 @@
 import requests
 import json
 
+
 def get_recipe(postdata):
 
 
@@ -21,9 +22,11 @@ def get_recipe(postdata):
 #json文字列を辞書に変換
     data_ = json.loads(data)
     
-    returndata = data_["data"][0]["foodImageUrl"]
+    returndata = data_["data"][0]["foodImageUrl"]["recipeUrl"]
     
 
     print(returndata)
+    print(data)
 
     return returndata
+get_recipe('野菜')
