@@ -1,7 +1,9 @@
 import requests
 import json
 
+
 def get_recipe(postdata):
+
 
     #banmeshiAPIのURL
     url = "https://banmeshii.herokuapp.com/get_db_recipe_one"
@@ -17,11 +19,14 @@ def get_recipe(postdata):
     #BanmeshiAPIにリクエスト
     data = requests.post(url,json = datas).text
 
-
+#json文字列を辞書に変換
     data_ = json.loads(data)
+    for i in range(0,2):
+        returndata =[ data_["data"][0]["foodImageUrl"],data_["data"][1]["recipeUrl"]]
 
-    returndata = data_["data"][0]["foodImageUrl"]
-
-    print(returndata)
-
-    return returndata
+        print(returndata)
+        # print(returndata2)
+        # print(data)
+        print(returndata[i])
+        return returndata[i]
+# get_recipe('野菜')

@@ -19,7 +19,8 @@ handler = WebhookHandler('45262b6352a751b2bcfdb258cad68bd2')
 
 @app.route('/')
 def test():
-    return 'hello'
+    print(get_recipe('鶏肉'))
+    
 
 
     
@@ -46,6 +47,9 @@ def callback():
 def handle_message(event):
     #関数呼び出し
     recipe = get_recipe(event.message.text)
+    
+    
+    
 
     line_bot_api.reply_message(
         event.reply_token,
