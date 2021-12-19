@@ -22,6 +22,7 @@ def get_recipe(postdata):
 #json文字列を辞書に変換
     data_ = json.loads(data)
     
+    #返り値toupleは大丈夫か？linebotがエラー吐いてるよ。byマーシ
     returndata = data_["data"][0]["foodImageUrl"],data_["data"][1]["recipeUrl"]
     
     print(returndata)
