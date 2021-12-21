@@ -7,7 +7,7 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import (
-    MessageEvent, TextMessage, TextSendMessage, messages,
+    MessageEvent, TextMessage, TextSendMessage,
 )
 
 from request import get_recipe
@@ -51,8 +51,7 @@ def handle_message(event):
 
     line_bot_api.reply_message(
         event.reply_token,
-        messages=recipe()
-        )
+        TextSendMessage(text = recipe))
 
 if __name__ == "__main__":
     app.run()

@@ -24,9 +24,9 @@ def get_recipe(postdata):
     for i in range(0,2):
         returndata =[ data_["data"][0]["foodImageUrl"],data_["data"][1]["recipeUrl"]]
 
-        print(returndata)
+        # print(returndata)
         # print(returndata2)
         # print(data)
         print(returndata[i])
-        return returndata[i]
-# get_recipe('野菜')
+    return returndata
+get_recipe('野菜')
