@@ -21,12 +21,21 @@ def get_recipe(postdata):
 
 #json文字列を辞書に変換
     data_ = json.loads(data)
-    for i in range(0,2):
-        returndata =[ data_["data"][0]["foodImageUrl"],data_["data"][1]["recipeUrl"]]
-
+    # for i in range(0,2):
+    #     returndata =[ data_["data"][0]["foodImageUrl"],data_["data"][1]["recipeUrl"]]
+        
+    returnlist=[]
+    for i in range(0,3):
+        result_dict={
+            "foodImageUrl":data_[data][i]["foodImageUrl"],
+            "url":data_[data][i]["recipeUrl"]
+        }
+        returnlist.append(result_dict)
         # print(returndata)
         # print(returndata2)
         # print(data)
-        print(returndata[i])
-    return returndata
+        # print(returndata[i])
+    # print(data[:100])
+    print(returnlist)
+    # return returndata
 get_recipe('野菜')
