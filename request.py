@@ -38,3 +38,5 @@ def get_recipe(postdata):
     # print(data[:100])
     print(returnlist)
     # return returndata
+
+get_recipe("鶏肉")
