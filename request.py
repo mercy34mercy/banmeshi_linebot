@@ -13,8 +13,11 @@ def get_recipe(postdata):
         "data":[]
     })
 
-    #Lineから貰ってきたデータを配列に入れる
-    datas["data"].append(str(postdata))
+    for data in postdata.replace("　"," ").split(" "):
+        #Lineから貰ってきたデータを配列に入れる
+        datas["data"].append(str(data))
+
+
 
     #BanmeshiAPIにリクエスト
     data = requests.post(url,json = datas).text
