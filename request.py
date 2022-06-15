@@ -6,7 +6,7 @@ def get_recipe(postdata):
 
 
     #banmeshiAPIのURL
-    url = "https://banmeshii.herokuapp.com/get_db_recipe_one"
+    url = "https://banmeshikun.azurewebsites.net/get_recipe"
 
     #jsonの型宣言
     datas = ({
@@ -38,4 +38,3 @@ def get_recipe(postdata):
     # print(data[:100])
     print(returnlist)
     # return returndata
-get_recipe('野菜')

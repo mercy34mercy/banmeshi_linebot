@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/masakun/py_pro/linebot2/venv"
+VIRTUAL_ENV="/home/makun/programing/python/banmeshi_linebot/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
