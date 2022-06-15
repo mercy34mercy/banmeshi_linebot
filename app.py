@@ -14,8 +14,10 @@ from request import get_recipe
 
 app = Flask(__name__)
 
-line_bot_api  = LineBotApi('YfN0O0lBlm3op1TSJh9NdPoZlwkRDxEfbgaSfDE7QBN+meYvrvQtGpLa1lQJy3m8dj38cYQZmAQwrJQzOd7oJ9Bgq8f00LQwpkXqgbXFmBBF5lemc5jq4krOo6uTfNVRF6uuwc+NNyA9OrFVsQ+2MgdB04t89/1O/w1cDnyilFU=')
-handler = WebhookHandler('45262b6352a751b2bcfdb258cad68bd2')
+
+
+line_bot_api  = LineBotApi('lc06w+nVr75SvVKOhl8M2xADbTuAz3leAufGlFTFyzOR6gs5QNwTKmZtKgY0+JhaylLsBi9k5SDN1UWXrfWeQ5A7cke7B/Cbf+SOD5hEQDu8k6HCDN6jdwd3XgTELhe6Nbsm7tru5pNWKb1mwESsVwdB04t89/1O/w1cDnyilFU=')
+handler = WebhookHandler('7d4332f03ff00004579df188b77bcfb2')
 
 @app.route('/')
 def test():
